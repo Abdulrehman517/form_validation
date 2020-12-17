@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form Validation in Javascript</title>
+</head>
+<body>
+	<form onsubmit="return checkForLastName() ;">
+		Enter Your First Name:
+		  <input type="text" name=""><br>
+		Enter your last name:
+		<input type="text" name="" id="lastname"><br>
+		<input type="submit" name="" value="Submit Form">
+	</form>
+	<script type="text/javascript">
+		function checkForLastName() {
+			if (document.getElementById('lastname').value.length === 0 ) {
+				alert("Please enter your last name");
+				document.getElementById('lastname').focus();
+				return false;
+			}
+		}
+	</script>
+
+</body>
+</html>
